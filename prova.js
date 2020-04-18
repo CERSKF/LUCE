@@ -1,4 +1,7 @@
-var x= 1
-console.log(x)
 
-window.alert("Questo è un messaggio");
+
+
+var nome = window.prompt("Inserisci il tuo nome");
+if (nome != null) {
+  // ...
+}
