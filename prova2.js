@@ -24,3 +24,5 @@ console.log(window.x);
 console.log(window.somma(3, 5));
 console.log(this.x);
 console.log(this.somma(3, 5));
+
+console.log(innerWidth + "x" + innerHeight)	// 1280x386
