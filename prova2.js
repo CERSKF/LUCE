@@ -26,3 +26,7 @@ console.log(this.x);
 console.log(this.somma(3, 5));
 
 console.log(innerWidth + "x" + innerHeight)	// 1280x386
+
+for (var i=0; i<frames.length; i++) {
+	console.log(frames[i].location.href)
+}
