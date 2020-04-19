@@ -40,3 +40,9 @@ var myParagrafo = document.getElementById("paragrafo");
 myParagrafo.ondblclick = function(e) {
 	e.target.innerHTML = "Hai fatto doppio click sul paragrafo!";
 };
+
+
+
+var myParagrafo = document.getElementById("paragrafo");
+myParagrafo.onmouseover = function(e) { e.target.className = "overClass"; };
+myParagrafo.onmouseout  = function(e) { e.target.className = "outClass";  };
