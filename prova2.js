@@ -46,3 +46,9 @@ myParagrafo.ondblclick = function(e) {
 var myParagrafo = document.getElementById("paragrafo");
 myParagrafo.onmouseover = function(e) { e.target.className = "overClass"; };
 myParagrafo.onmouseout  = function(e) { e.target.className = "outClass";  };
+
+
+document.onmousemove = function(e) {
+  console.log("Posizione rispetto alla finestra: " + e.clientX + ", " + e.clientY);
+  console.log("Posizione rispetto alla pagina: " + e.pageX + ", " + e.pageY);
+};
