@@ -7,9 +7,9 @@
 //}
 
 
-document.write(nome);
+//document.write(nome);
 
-o=www;
+o="www";
 document.write(o);
 
 
