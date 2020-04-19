@@ -27,6 +27,10 @@ console.log(this.somma(3, 5));
 
 console.log(innerWidth + "x" + innerHeight)	// 1280x386
 
+window.onresize = function() {
+  console.log(window.innerWidth + "," + window.innerHeight);
+};
+
 for (var i=0; i<frames.length; i++) {
 	console.log(frames[i].location.href)
 }
