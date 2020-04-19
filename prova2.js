@@ -34,3 +34,9 @@ window.onresize = function() {
 for (var i=0; i<frames.length; i++) {
 	console.log(frames[i].location.href)
 }
+
+
+var myParagrafo = document.getElementById("paragrafo");
+myParagrafo.ondblclick = function(e) {
+	e.target.innerHTML = "Hai fatto doppio click sul paragrafo!";
+};
