@@ -48,7 +48,21 @@ myParagrafo.onmouseover = function(e) { e.target.className = "overClass"; };
 myParagrafo.onmouseout  = function(e) { e.target.className = "outClass";  };
 
 
-document.onmousemove = function(e) {
-  console.log("Posizione rispetto alla finestra: " + e.clientX + ", " + e.clientY);
-  console.log("Posizione rispetto alla pagina: " + e.pageX + ", " + e.pageY);
-};
+//document.onmousemove = function(e) {
+//  console.log("Posizione rispetto alla finestra: " + e.clientX + ", " + e.clientY);
+//  console.log("Posizione rispetto alla pagina: " + e.pageX + ", " + e.pageY);
+//};
+
+
+
+var myForm = document.forms.myForm;
+myForm.addEventListener("submit", function(e) {
+	var spnTotale = document.getElementById("spnTotale");
+	var txtQta = document.getElementById("txtQta");
+	var txtPrezzo = document.getElementById("txtPrezzo");
+	var txtIVA = document.getElementById("txtIVA");
+	spnTotale.innerHTML = (txtQta.valueAsNumber * txtPrezzo.valueAsNumber) +
+                          (txtQta.valueAsNumber * txtPrezzo.valueAsNumber *
+                           txtIVA.valueAsNumber)/100;
+	e.preventDefault();
+});
