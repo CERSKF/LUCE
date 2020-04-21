@@ -84,12 +84,12 @@ btnNextImg.onclick = function () {
 
 
 var timerId;
-function startAnimation() {
+btnstart.onclick = function startAnimation() {
 	if(timerId == null) {
 		timerId = setInterval(animate, 20);
 	}
 }
-function stopAnimation() {
+btnstop.onclick = function stopAnimation() {
 	if(timerId != null){
 		clearInterval(timerId);
             timerId = null;
@@ -98,7 +98,6 @@ function stopAnimation() {
 function animate() {
 	var cerchio = document.getElementById("cerchio");
 	var x = cerchio.getAttribute("cx");
-  console.log(x);
 	var newX = 2 + parseInt(x);
 	if(newX > window.innerWidth) {
 		newX = 20;
