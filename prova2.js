@@ -9,10 +9,6 @@
 
 //document.write(nome);
 
-o="www";
-document.write(o);
-
-
 var x = 123;
 function somma(a, b) {
 	return a + b;
@@ -43,7 +39,7 @@ myParagrafo.ondblclick = function(e) {
 
 
 
-var myParagrafo = document.getElementById("paragrafo");
+var myParagrafo = document.getElementById("paragrafo2");
 myParagrafo.onmouseover = function(e) { e.target.className = "overClass"; };
 myParagrafo.onmouseout  = function(e) { e.target.className = "outClass";  };
 
