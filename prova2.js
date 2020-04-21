@@ -9,19 +9,19 @@
 
 //document.write(nome);
 
-var x = 123;
+var xe = 123;
 function somma(a, b) {
 	return a + b;
 }
 
-console.log(x);
+console.log(xe);
 console.log(somma(3, 5));
-console.log(window.x);
+console.log(window.xe);
 console.log(window.somma(3, 5));
-console.log(this.x);
+console.log(this.xe);
 console.log(this.somma(3, 5));
 
-console.log(innerWidth + "x" + innerHeight)	// 1280x386
+console.log(innerWidth + "xe" + innerHeight)	// 1280x386
 
 window.onresize = function() {
   console.log(window.innerWidth + "," + window.innerHeight);
@@ -98,6 +98,7 @@ function stopAnimation() {
 function animate() {
 	var cerchio = document.getElementById("cerchio");
 	var x = cerchio.getAttribute("cx");
+  console.log(x);
 	var newX = 2 + parseInt(x);
 	if(newX > window.innerWidth) {
 		newX = 20;
