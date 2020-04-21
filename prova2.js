@@ -84,6 +84,8 @@ btnNextImg.onclick = function () {
 
 
 var timerId;
+var btnstart = document.getElementById("btnstart");
+var btnstop = document.getElementById("btnstop");
 btnstart.onclick = function startAnimation() {
 	if(timerId == null) {
 		timerId = setInterval(animate, 20);
