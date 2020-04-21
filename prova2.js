@@ -72,7 +72,7 @@ myForm.addEventListener("submit", function(e) {
 var btnAddImage = document.getElementById("btnAddImage");
 btnAddImage.onclick = function() {
   var img = document.createElement("img");
-  img.src = "immagine.jpg";
+  img.src = "Immagine.jpg";
   document.body.appendChild(img);
 };
 
