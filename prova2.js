@@ -85,3 +85,26 @@ btnNextImg.onclick = function () {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   img.src = images[currentImageIndex];
 };
+
+
+var timerId;
+function startAnimation() {
+	if(timerId == null) {
+		timerId = setInterval(animate, 20);
+	}
+}
+function stopAnimation() {
+	if(timerId != null){
+		clearInterval(timerId);
+            timerId = null;
+	}
+}
+function animate() {
+	var cerchio = document.getElementById("cerchio");
+	var x = cerchio.getAttribute("cx");
+	var newX = 2 + parseInt(x);
+	if(newX > window.innerWidth) {
+		newX = 20;
+	}
+	cerchio.setAttribute("cx", newX);
+}
