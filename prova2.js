@@ -66,3 +66,22 @@ myForm.addEventListener("submit", function(e) {
                            txtIVA.valueAsNumber)/100;
 	e.preventDefault();
 });
+
+
+
+var btnAddImage = document.getElementById("btnAddImage");
+btnAddImage.onclick = function() {
+  var img = document.createElement("img");
+  img.src = "immagine.jpg";
+  document.body.appendChild(img);
+};
+
+
+var images = ["img1.jpg", "img2.jpg", "img3.jpg"];
+var img = document.getElementById("img");
+var btnNextImg = document.getElementById("btnNextImage");
+var currentImageIndex = 0;
+btnNextImg.onclick = function () {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  img.src = images[currentImageIndex];
+};
