@@ -88,7 +88,7 @@ var btnstart = document.getElementById("btnstart");
 var btnstop = document.getElementById("btnstop");
 btnstart.onclick = function startAnimation() {
 	if(timerId == null) {
-		timerId = setInterval(animate, 20);
+		timerId = setInterval(animate2, 20);
 	}
 }
 btnstop.onclick = function stopAnimation() {
@@ -97,7 +97,7 @@ btnstop.onclick = function stopAnimation() {
             timerId = null;
 	}
 }
-function animate() {
+function animate2() {
 	var cerchio = document.getElementById("cerchio");
 	var x = cerchio.getAttribute("cx");
 	var newX = 2 + parseInt(x);
@@ -106,3 +106,35 @@ function animate() {
 	}
 	cerchio.setAttribute("cx", newX);
 }
+
+
+
+var myCanvas = document.getElementById("myCanvas");
+var context = myCanvas.getContext("2d");
+var x = 100;
+var y = 100;
+function drawCircle(x, y) {
+	context.beginPath();
+	context.arc(x, y, 50, 0, 2 * Math.PI);
+	context.fillStyle = "#00ff00";
+	context.fill();
+	context.strokeStyle = "#000000";
+	context.stroke();
+}
+
+function animate() {
+	x = x + 2;
+	if (x > myCanvas.width) x = 20;
+	context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+	drawCircle(x, y);
+}
+
+var btnstart2 = document.getElementById("btnstart2");
+
+var timerId;
+btnstart2.onclick = function startAnimation() {
+	if( timerId == null) {
+            	timerId = setInterval(animate, 20);
+	}
+}
+startAnimation();
