@@ -137,4 +137,3 @@ btnstart2.onclick = function startAnimation() {
             	timerId = setInterval(animate, 20);
 	}
 }
-startAnimation();
