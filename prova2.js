@@ -34,7 +34,7 @@ for (var i=0; i<frames.length; i++) {
 
 var myParagrafo = document.getElementById("paragrafo");
 myParagrafo.ondblclick = function(e) {
-	e.target.innerHTML = "Hai fatto doppio click sul paragrafo!";
+	e.target.innerHTML = "Hai fatto doppio click sul paragrafo!?";
 };
 
 
